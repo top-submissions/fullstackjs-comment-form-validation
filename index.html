@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comment Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="comment-section">
@@ -12,41 +12,41 @@
       <form id="commentform" class="comment-form">
         <div class="comment-form-name">
           <input
-            type="text"
             id="name"
             placeholder="Name *"
             name="name"
+            type="text"
             value=""
-            pattern="^[0-9]+$"
+            pattern="^[^0-9]+$"
             size="30"
             maxlength="245"
             required
           />
-          <label for="name" data-help="Are you 11 from Stranger Things?"
+          <label for="name" data-help="¿Are you 11 from Stranger Things?"
             >Name</label
           >
         </div>
         <div class="comment-form-surname">
           <input
-            type="text"
             id="surname"
             placeholder="Surname *"
             name="surname"
+            type="text"
             value=""
             size="30"
             maxlength="245"
             required
           />
-          <label for="surname" data-help="A girl has no name - Arya Stark"
+          <label for="surname" data-help="A girl has no name- Arya Stark"
             >Surname</label
           >
         </div>
         <div class="comment-form-email">
           <input
-            type="email"
             id="email"
             placeholder="Email *"
             name="email"
+            type="email"
             value=""
             size="30"
             maxlength="100"
@@ -57,10 +57,10 @@
         </div>
         <div class="comment-form-url">
           <input
-            type="url"
             id="url"
             placeholder="Website"
             name="url"
+            type="url"
             value=""
             size="30"
             maxlength="200"
@@ -71,10 +71,10 @@
         </div>
         <div class="comment-form-comment">
           <textarea
-            name="comment"
-            id="comment"
             textarea=""
             placeholder="Comment *"
+            id="comment"
+            name="comment"
             cols="45"
             rows="8"
             maxlength="65525"
@@ -87,7 +87,13 @@
           >
         </div>
         <div class="form-submit">
-          <input type="submit" name="submit" id="submit" value="Post Comment" />
+          <input
+            name="submit"
+            type="submit"
+            id="submit"
+            class="submit"
+            value="Post Comment"
+          />
         </div>
       </form>
     </div>

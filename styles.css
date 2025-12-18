@@ -71,7 +71,7 @@ h1 {
 
 @media (min-width: 600px) {
   #commentform > .comment-form-name,
-  #commentform > .comment-form.surname,
+  #commentform > .comment-form-surname,
   #commentform > .comment-form-email,
   #commentform > .comment-form-url {
     -webkit-box-flex: 0;
@@ -136,7 +136,7 @@ textarea:focus {
 @-moz-keyframes silo-fade {
   0% {
     opacity: 0;
-    -moz-transition: translateY(-1.4em);
+    -moz-transform: translateY(-1.4em);
   }
 
   100% {
@@ -152,7 +152,7 @@ textarea:focus {
     -moz-transform: translateY(-1.4em);
     -ms-transform: translateY(-1.4em);
     -o-transform: translateY(-1.4em);
-    -transform: translateY(-1.4em);
+    transform: translateY(-1.4em);
   }
 
   100% {
@@ -231,14 +231,15 @@ textarea:focus {
   color: #8bc34a;
   -webkit-animation: silo-fade 0.2s;
   -moz-animation: silo-fade 0.2s;
-  -animation: silo-fade 0.2s;
+  animation: silo-fade 0.2s;
   max-width: 80%;
 }
 
 #commentform input:focus + label,
 #commentform input[required]:valid + label,
 #commentform input:not(:placeholder-shown) + label,
-#commentform textarea:focus + label #commentform textarea:valid + label,
+#commentform textarea:focus + label,
+#commentform textarea:valid + label,
 #commentform textarea:not(:placeholder-shown) + label {
   display: block;
 }
@@ -342,7 +343,11 @@ textarea:focus {
   display: block;
   cursor: pointer;
 }
+
 #commentform input[type="submit"]:hover {
   background-color: rgba(139, 195, 74, 0.25);
   border: 1px solid #8bc34a;
+}
+
+.fo {
 }
