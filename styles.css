@@ -18,17 +18,67 @@ button,
 input,
 select,
 textarea {
-    font-size: 100%;
-    margin: 0;
-    max-width: 100%;
-    vertical-align: baseline;
+  font-size: 100%;
+  margin: 0;
+  max-width: 100%;
+  vertical-align: baseline;
 }
 
-textarea, input {
-    outline: none;
+textarea,
+input {
+  outline: none;
 }
 
 textarea {
-    overflow: auto;
-    vertical-align: top;
+  overflow: auto;
+  vertical-align: top;
 }
+
+/* Layout */
+.comment-section {
+  width: 100%;
+  max-width: 760px;
+  margin: 30px auto;
+}
+
+h1 {
+  padding: 15px;
+  margin: 0;
+}
+
+#commentform {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+#commentform > [class^="comment-form"],
+#commentform > .form-submit {
+  position: relative;
+  min-height: 1px;
+  padding: 15px;
+  width: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 600px) {
+    #commentform > .comment-form-name,
+    #commentform > .comment-form.surname,
+    #commentform > .comment-form-email,
+    #commentform > .comment-form-url {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
