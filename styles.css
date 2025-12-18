@@ -166,56 +166,183 @@ textarea:focus {
 }
 
 @-webkit-keyframes silo-help {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    4% {
-        opacity: 0;
-    }
+  4% {
+    opacity: 0;
+  }
 
-    5% {
-        opacity: 1;
-    }
+  5% {
+    opacity: 1;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes silo-help {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    4% {
-        opacity: 0;
-    }
+  4% {
+    opacity: 0;
+  }
 
-    5% {
-        opacity: 1;
-    }
+  5% {
+    opacity: 1;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes silo-help {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    4% {
-        opacity: 0;
-    }
+  4% {
+    opacity: 0;
+  }
 
-    5% {
-        opacity: 1;
-    }
+  5% {
+    opacity: 1;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
+/* Label */
+#commentform label {
+  padding: 5px 0;
+  font-size: 14px;
+  font-size: 0.75rem;
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 26px;
+  color: #8bc34a;
+  -webkit-animation: silo-fade 0.2s;
+  -moz-animation: silo-fade 0.2s;
+  -animation: silo-fade 0.2s;
+  max-width: 80%;
+}
+
+#commentform input:focus + label,
+#commentform input[required]:valid + label,
+#commentform input:not(:placeholder-shown) + label,
+#commentform textarea:focus + label #commentform textarea:valid + label,
+#commentform textarea:not(:placeholder-shown) + label {
+  display: block;
+}
+
+#commentform input:invalid,
+#commentform textarea:invalid {
+  border: 1px solid #b92326;
+  background-color: rgba(185, 35, 38, 0.25);
+}
+
+#commentform input:focus:invalid,
+#commentform textarea:focus:invalid {
+  background-color: transparent;
+  border: 1px solid #b92326;
+}
+
+#commentform input:invalid + label,
+#commentform textarea:invalid + label {
+  color: #b92326;
+}
+
+#commentform input:focus:invalid + label:after,
+#commentform textarea:focus:invalid + label:after {
+  content: " (" attr(data-help) ")";
+  animation: silo-help 100s;
+}
+
+#commentform input:invalid + label:after,
+#commentform textarea:invalid + label:after {
+  content: " (" attr(data-help) ")";
+}
+
+#commentform input:valid,
+#commentform textarea:valid {
+  border: 1px solid #8bc34a;
+  background-color: rgba(139, 195, 74, 0.25);
+}
+
+#commentform input:focus:valid,
+#commentform textarea:focus:valid {
+  border: 1px solid #8bc34a;
+  background-color: transparent;
+}
+
+#commentform input:valid + label,
+#commentform textarea:valid + label {
+  color: #8bc34a;
+}
+
+#commentform input:placeholder-shown,
+#commentform textarea:placeholder-shown {
+  border: 1px solid #d8d8d8;
+  background-color: transparent;
+}
+
+#commentform input::placeholder,
+#commentform textarea::placeholder {
+  color: #d8d8d8;
+}
+
+#commentform input::-webkit-input-placeholder,
+#commentform textarea::-webkit-input-placeholder {
+  color: #d8d8d8;
+}
+
+#commentform input:-ms-input-placeholder,
+#commentform textarea:-ms-input-placeholder {
+  color: #d8d8d8;
+}
+
+#commentform input::-moz-placeholder,
+#commentform textarea::-moz-placeholder {
+  color: #d8d8d8;
+}
+
+#commentform input:focus::placeholder,
+#commentform textarea:focus::placeholder {
+  color: transparent;
+}
+#commentform input:focus::-webkit-input-placeholder,
+#commentform textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+#commentform input:focus:-ms-input-placeholder,
+#commentform textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+#commentform input:focus::-moz-placeholder,
+#commentform textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+#commentform input[type="submit"] {
+  background-color: transparent;
+  border: 1px solid #8bc34a;
+  color: #8bc34a;
+  padding: 5px 15px;
+  font-size: 16px;
+  font-size: 1rem;
+  margin: 15px auto;
+  vertical-align: middle;
+  display: block;
+  cursor: pointer;
+}
+#commentform input[type="submit"]:hover {
+  background-color: rgba(139, 195, 74, 0.25);
+  border: 1px solid #8bc34a;
+}
